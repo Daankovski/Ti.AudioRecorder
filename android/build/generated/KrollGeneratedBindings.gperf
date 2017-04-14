@@ -1,0 +1,18 @@
+%define lookup-function-name lookupGeneratedInit
+%define class-name AudiorecorderBindings
+%{
+
+#include <string.h>
+#include <v8.h>
+#include <KrollBindings.h>
+
+#include "com.daan.audiorecorder.RecorderProxy.h"
+#include "com.daan.audiorecorder.AudiorecorderModule.h"
+
+
+%}
+struct titanium::bindings::BindEntry;
+%%
+com.daan.audiorecorder.RecorderProxy, ::com::daan::audiorecorder::audiorecorder::RecorderProxy::bindProxy, ::com::daan::audiorecorder::audiorecorder::RecorderProxy::dispose
+com.daan.audiorecorder.AudiorecorderModule, ::com::daan::audiorecorder::AudiorecorderModule::bindProxy, ::com::daan::audiorecorder::AudiorecorderModule::dispose
+%%
